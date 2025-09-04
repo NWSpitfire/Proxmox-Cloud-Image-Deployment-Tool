@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Start script message
+echo ""
 echo "Proxmox Cloud Image Deployment Tool"
 echo "Version 1.0 - 2025"
 echo "By NWSpitfire (Github)"
