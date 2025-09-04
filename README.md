@@ -1,32 +1,33 @@
 # Proxmox-Cloud-Image-Deployment-Tool
 PCIDT
 
-## Downloading and Running the script
+## Downloading the script
 
 1. Download the latest version of the script
 
 ```
-TBA
+git clone https://github.com/NWSpitfire/Proxmox-Cloud-Image-Deployment-Tool.git
 ```
 
 2. Create a configuration file from the sample (optional).
 
 ``` 
-git clone https://github.com/NWSpitfire/Proxmox-Cloud-Image-Deployment-Tool.git
+cd Proxmox-Cloud-Image-Deployment-Tool
+cp sample-config.conf main-config.conf
 ```
+You can edit the options of the configuration file(s) to suite your desired configuration. See the Configuration File Section below for info on the options.
 
-###### NOTE: Multiple configuration files can be created for different VM Configurations.
-
-3. Make the script executable.
+4. Make the script executable.
 
 ```
 sudo chmod +x PCIDT-Script.sh
 ```
 
-4. Run the script.
+## Running the script.
+
 This step will depend on whether you are running the script with or without a configuration file. If you do not specify a configuration file then you will be prompted at the beginning of the script to specify your settings.
 
-i. Run the script without a configuration file.
+### Run the script without a configuration file.
 
 By doing this you will need to know the path of the cloud-image disk on your host, you can find this by using *Readlink*.
 
@@ -47,9 +48,20 @@ Once you have identified and copied (or written down) your path to the cloud-ima
 ./PCIDT-Script.sh
 ```
 
-It will ask you to manually specify each of the options which would normally be specified in the configuration file (see section Configuration File below for more info on the options). When asked to specify *CLOUD DISK*, paste the path you copied from *Readlink* earlier.
+It will ask you to manually specify each of the options which would normally be specified in the configuration file (see section Configuration File section below for more info on the options). When asked to specify *CLOUD DISK*, paste the path you copied from *Readlink* earlier.
 
-Once all options have been set, it should go through and configure the VM. Once complete you should have a basic VM (or Template if you specified that) that you can go in and add things to like SSH keys and 
+Once all options have been set, it should go through and configure the VM. Once complete you should have a basic VM (or Template if you specified that) that you can go in and add things like SSH keys to the VM.
+
+
+2. Run the script **with** a configuration file
+
+By specifying a configuration file, you don't have to worry about specifying any options at the start of the script. You can also have multiple configuration files to suit your needs.
+
+```
+./PCIDT-Script.sh <path to configuration file>
+
+./PCIDT-Script.sh sample-config.conf
+```
 
 
 ## Configuration File
