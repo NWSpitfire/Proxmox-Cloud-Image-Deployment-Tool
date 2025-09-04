@@ -3,16 +3,17 @@ PCIDT
 
 ## Downloading the script
 
-1. Download the latest version of the script
+1. Download the latest version of the script and sample config.
 
 ```
-git clone https://github.com/NWSpitfire/Proxmox-Cloud-Image-Deployment-Tool.git
+wget https://github.com/NWSpitfire/Proxmox-Cloud-Image-Deployment-Tool/releases/download/v1.0.0/PCIDT-Script.sh
+
+wget https://github.com/NWSpitfire/Proxmox-Cloud-Image-Deployment-Tool/releases/download/v1.0.0/sample-config.conf
 ```
 
 2. Create a configuration file from the sample (optional).
 
 ``` 
-cd Proxmox-Cloud-Image-Deployment-Tool
 cp sample-config.conf main-config.conf
 ```
 You can edit the options of the configuration file(s) to suite your desired configuration. See the Configuration File Section below for info on the options.
