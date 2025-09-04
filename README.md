@@ -81,3 +81,16 @@ The options that can be configured are;
 | `CI_PASSWORD`         | Cloud-init password            | (required)  |
 | `CI_USE_DHCP`         | Use DHCP (`true`/`false`)      | `true`      |
 | `CONVERT_TO_TEMPLATE` | Convert to template at the end | `false`     |
+
+## IMPORTANT NOTES AND DISCLOSURE
+
+This is a script from the internet, **before running** on your system I strongly advise you go through and understand what the script is doing. Running random scripts of unknown function and origin from the internet on your "totally not in production* homelab hypervisor, that your family has now come to rely on entirely (lets be honest, keeping Plex all for yourself was never going to happen), is a **terrible idea**! 
+For all you know the script could be downloading a crypto-miner or the authors favourite episode of The Power Puff Girls onto your system. Scripts that run on Hypervisors are especially dangerous because one wrong command could spell disaster for your virtual infrastructure, although this is mitigated somewhat by backups (you do have backups... **right**??).
+
+I have tested this script multiple times on my test Proxmox server to debug and ensure it functions correctly - I don't want to nuke my production homelab server. But with all things computers, there are no guarantee's. Make sure you understand the script before running. Also, just the usual disclaimer that **I take no responsibility for your actions or the effects of this script on your system, etc, etc.**
+
+Another disclaimer I would like to make purely for the sake of transparency. The base boilerplate code for this script was created by AI, which I then built this script up from. Yes, I am very lazy, I could not be bothered to write all the tedious input sections. Does this mean this whole repo is AI Slop? Probably. I know some people are very against AI, and that is ok, but by now you can probably tell I'm lazy and have too many projects on the go, AI just makes the process more efficient for me by generating boilerplates, *for now*.
+
+In all seriousness though (fake sarcasm aside), please be careful out there. There is a lot more dangers from literal AI slop that might break your machine, or from malware in general masquerading as useful scripts or programs. I published this script because, althoug simple, the whole Homelab & Self-Hosted Communities are great and, if this makes at least one persons life easier then I'm happy.
+
+Homelabs are cool, keep homelabbing.
