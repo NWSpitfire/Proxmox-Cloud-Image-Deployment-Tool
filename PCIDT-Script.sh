@@ -132,6 +132,7 @@ fi
 if [[ "$CONVERT_TO_TEMPLATE" =~ ^[Tt][Rr][Uu][Ee]$ || "$CONVERT_TO_TEMPLATE" =~ ^[Yy][Ee]?[Ss]?$ ]]; then
     echo "-- Converting VM $VMID to template..."
     qm template "$VMID"
+    sleep 10
     echo "-- VM $VMID converted to template."
 else
     echo "VM $VMID left as normal VM."
