@@ -112,6 +112,10 @@ qm set "$VMID" --boot order=scsi0 --bootdisk scsi0 --bios seabios
 echo "Adding serial console..."
 qm set "$VMID" --serial0 socket --vga serial0
 
+# Enable QEMU guest tools and file system trim on first boot
+echo "Enabling QEMU guest tools and file system trim on first boot"
+qm set "$VMID" --agent 1,fstrim_cloned_disks=1
+
 # Set cloud-init options
 echo "Configuring Cloud-Init..."
 qm set "$VMID" --ciuser "$CI_USER" --cipassword "$CI_PASSWORD"
